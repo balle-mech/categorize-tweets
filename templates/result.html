@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>{{ id }}のツイート解析結果</h1>
+    <p>{{ num }} 件のツイートを解析</p>
+    {% for category, values in data.items() %}
+        <div class="card mb-3" style="margin: auto;">
+            <div class="card-body">
+                <h2>{{ category }}系のツイート：{{ values[0] }}%</h2>
+                <p>例えばこんなツイート：{{ values[1] }}</p>
+                <a href="/detail/{{ category }}" role="button">もっとツイートを見る</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

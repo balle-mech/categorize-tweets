@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<main class="container text-center">
+  <div class="mb-3">
+    <p>AI(fasttext)によりあなたのツイートをジャンル別に分類します</p>
+  </div>
+  <div class="user-input">
+    {% if error %}
+      <p class="error alert-danger rounded">{{error}}</p>
+    {% endif %}
+    <form action="/result" method="POST">
+      <div class="form-group pb-3">
+        <label for="id" class="form-label">Twitter IDを入力してください</label>
+        <div class="input-group pb-3">
+          <span class="input-group-text" id="input-group-left">@</span>
+          <input type="text" class="form-control" name="id" placeholder="User name"  aria-describedby="input-group-left">
+        </div>
+        <input type="submit"  class="btn btn-primary" value="ツイートを解析する！">
+      </div>
+    </form>
+  </div>
+</main>
+
+{% endblock %}

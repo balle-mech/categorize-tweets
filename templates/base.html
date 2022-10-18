@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <title>Tweet分析</title>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light p-3">
+            <a class="navbar-brand mb-3 pl-3 text-primary" href="/" style="font-size: 2rem;">Tweetカテゴリ分析</a>
+        </nav>
+    </header>
+    {% block body %}{% endblock %}
+</body>
+
+</html>
