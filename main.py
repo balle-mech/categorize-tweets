@@ -9,7 +9,7 @@ import fasttext as ft
 import MeCab
 import config
 
-COUNT = 700    # ツイート取得数
+COUNT = 700    # ツイート取得上限数
 model = ft.load_model('./model-1.bin')  # 分類器
 
 # flask初期設定
@@ -146,4 +146,4 @@ def detail(category):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
