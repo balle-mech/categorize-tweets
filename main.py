@@ -111,8 +111,9 @@ def get_detail_data(category):
 def index():
     # jsonディレクトリ内のファイルを削除
     json_files = glob('json_dir/*.json')
-    for file in json_files:
-        remove(file)
+    if json_files:
+        for file in json_files:
+            remove(file)
     return render_template('index.html')
 
 
