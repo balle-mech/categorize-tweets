@@ -1,4 +1,3 @@
 __pycache__/
-/config.py
-/.env
+# /.env
 json_dir/
