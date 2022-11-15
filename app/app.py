@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, url_for
 import tweepy
 import fasttext as ft
 import MeCab
-import config
+import app.config as config
 
 COUNT = 700    # ツイート取得上限数
 model = ft.load_model('./model-1.bin')  # 分類器
@@ -147,4 +147,4 @@ def detail(category):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True, host='0.0.0.0', port=port)
