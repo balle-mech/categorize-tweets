@@ -1,17 +1,13 @@
-FROM ubuntu:latest
-# FROM python:3.8
-RUN apt-get update
-# pythonとpipをインストール
-RUN apt-get install -y python3 python3-pip
-
-# MeCabをインストール
-RUN apt-get -y install mecab
-# PATHを通す
-RUN export MECABRC = '/etc/mecabrc'
+FROM python:3.7.2
 
 WORKDIR /usr/src/app
 ENV FLASK_APP=app
+ENV MECABRC=/etc/mecabrc
 
 COPY /app/requirements.txt ./
 
-RUN pip3 install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# MeCabをインストール
+RUN apt-get update -qq && apt-get install -y mecab
