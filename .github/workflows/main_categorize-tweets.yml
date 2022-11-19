@@ -30,11 +30,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
         
-      - name: Install mecab
-        run: |
-          apt-get -y install mecab
-          export MECABRC='/etc/mecabrc'
-        
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
       - name: Upload artifact for deployment jobs
