@@ -6,7 +6,8 @@ from glob import glob
 from flask import Flask, render_template, request, url_for
 import tweepy
 import fasttext as ft
-import MeCab
+from sudachipy import tokenizer
+from sudachipy import dictionary
 import config
 
 COUNT = 700    # ツイート取得上限数
@@ -38,15 +39,21 @@ def format_text(text):
         return text
 
 
+# SudachiPyで分かち書きする関数
+def wakati(sentence):
+    tokenizer_obj = dictionary.Dictionary().create()
+    mode = tokenizer.Tokenizer.SplitMode.C
+    return " ".join( [m.surface() for m in tokenizer_obj.tokenize(sentence, mode)] )
+
+
 # 文書を分かち書きし単語単位に分割
 def separate_tweet(tweets):
     results = []
-    tagger = MeCab.Tagger('-Owakati')
 
     for tweet in tweets:
         content = format_text(tweet.text)
-        wakati = tagger.parse(content)
-        results.append(wakati)
+        content = wakati(content)
+        results.append(content)
     return results
 
 
@@ -147,4 +154,4 @@ def detail(category):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
