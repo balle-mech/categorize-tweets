@@ -6,6 +6,7 @@ name: Build and deploy Python app to Azure Web App - categorize-tweets
 
 on:
   push:
+  pull_request:
     branches:
       - main
   workflow_dispatch:
