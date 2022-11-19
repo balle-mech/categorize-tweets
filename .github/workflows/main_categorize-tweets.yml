@@ -62,8 +62,3 @@ jobs:
           app-name: 'categorize-tweets'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A20961B038E64500AE05A9C410F25EA8 }}
-        env: |
-          API_KEY: ${{ secrets.API_KEY }}
-          API_SECRET: ${{ secrets.API_SECRET }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
