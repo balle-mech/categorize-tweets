@@ -36,5 +36,5 @@ Python 3.10.4
 ### 使用しているAPI,SDK,ライブラリなど
 - Twitter API
 - fastText(https://fasttext.cc/) (テキスト分類)
-- SudachiPy(https://github.com/WorksApplications/SudachiPy)　
+- SudachiPy(https://github.com/WorksApplications/SudachiPy )　
 (文章を単語に分ける)
