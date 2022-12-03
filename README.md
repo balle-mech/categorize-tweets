@@ -10,11 +10,10 @@ categorize-tweets
 
 ### 公開したアプリの URL
 https://cateorize-tweet.azurewebsites.net
-（CDは導入しているはずなのですが、もしかしたらサーバーが落ちてて繋がらないかもしれません）
+（CDは導入しているのですが、もしかしたらサーバーが落ちてて繋がらないかもしれません）
 
-### 該当プロジェクトのリポジトリ URL
-- https://github.com/a2c6201/categorize-tweets
-- https://github.com/a2c6201/let-Fasttext-learn-tweets(ツイートを学習しジャンル分け学習モデルを生成するリポジトリ)
+### ツイートを学習しジャンル分け学習モデルを生成するリポジトリ
+- https://github.com/a2c6201/let-Fasttext-learn-tweets
 
 ## 開発環境
 ### 開発環境
