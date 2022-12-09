@@ -3,8 +3,8 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 import tweepy
 
-# dotenv_path = join(dirname(__file__), '.env')
-# load_dotenv(dotenv_path)
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
 # 認証に必要なキーとトークン
 API_KEY = os.environ.get('API_KEY')
