@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/d87add6f-e984-4eba-b9b1-028ab5d10e45/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/categorize-your-tweets",
+  "appService.deploySubpath": "."
+}
