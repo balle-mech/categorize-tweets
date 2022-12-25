@@ -1,13 +1,15 @@
-from os import remove
-import re, json
+import json
+import re
 from crypt import methods
-from random import choice
 from glob import glob
-from flask import Flask, render_template, request, url_for
-import tweepy
+from os import remove
+from random import choice
+
 import fasttext as ft
-from sudachipy import tokenizer
-from sudachipy import dictionary
+import tweepy
+from flask import Flask, render_template, request, url_for
+from sudachipy import dictionary, tokenizer
+
 import config
 
 COUNT = 700    # ツイート取得上限数
@@ -154,4 +156,4 @@ def detail(category):
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
