@@ -32,13 +32,13 @@ def get_tweet(id):
 
 # 正規表現を使ってツイートから不要な情報を削除
 def format_text(text):
-        text=re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-…]+', "", text)  # 外部リンクURL
-        text=re.sub(r'@[\w/:%#\$&\?\(\)~\.=\+\-…]+', "", text) # リツイート元のユーザーID
-        text=re.sub(r'＼', "", text)
-        text=re.sub(r'／', "", text)
-        text=re.sub(r'RT', "", text)
-        text=re.sub(r'\n', " ", text)    # 改行文字
-        return text
+    text=re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-…]+', "", text)  # 外部リンクURL
+    text=re.sub(r'@[\w/:%#\$&\?\(\)~\.=\+\-…]+', "", text) # リツイート元のユーザーID
+    text=re.sub(r'＼', "", text)
+    text=re.sub(r'／', "", text)
+    text=re.sub(r'RT', "", text)
+    text=re.sub(r'\n', " ", text)    # 改行文字
+    return text
 
 
 # SudachiPyで分かち書きする関数
