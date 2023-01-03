@@ -11,6 +11,14 @@ categorize-tweets
 - どんなツイートがどのジャンルに分類されたのか確認できる。
 - URLなどの不要なテキスト情報は取り除き学習・予測
 
+### ページ画像
+
+<img width="1440" alt="スクリーンショット 2023-01-03 9 44 32" src="https://user-images.githubusercontent.com/91408297/210290091-36489e7c-d15d-4b79-a485-823ae634a234.png">
+
+<img width="1439" alt="スクリーンショット 2023-01-03 9 43 55" src="https://user-images.githubusercontent.com/91408297/210290115-d63f14ac-c34c-4cda-9253-c1b7253baf7e.png">
+
+<img width="1440" alt="スクリーンショット 2023-01-03 9 46 00" src="https://user-images.githubusercontent.com/91408297/210290127-315c0151-5b26-4cd5-ad2f-8b4a518e6fe7.png">
+
 ### 公開したアプリの URL
 
 https://cateorize-tweet.azurewebsites.net
@@ -59,4 +67,3 @@ Python 3.10.4
 ```
 pip install -r requirements.txt
 ```
-
