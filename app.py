@@ -31,7 +31,7 @@ def get_tweet(id):
 
 # 正規表現を使ってツイートから不要な情報を削除
 def format_text(text):
-    text = re.sub(r'https?://[\w/:%#\$&\?\(\)~\. = \+\-…]+', "", text)  # 外部リンクURL
+    text = re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-…]+', "", text)  # 外部リンクURL
     text = re.sub(r'@[\w/:%#\$&\?\(\)~\. = \+\-…]+', "", text)  # リツイート元のユーザーID
     text = re.sub(r'＼', "", text)
     text = re.sub(r'／', "", text)
